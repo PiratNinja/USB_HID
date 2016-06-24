@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+*.exe
+app/build-usbHid-Desktop_Qt_Qt_Version_MinGW_32bit-Debug/
+app/build-usbHid-Desktop_Qt_5_4_2_MSVC2010_OpenGL_32bit-Debug/
+app/usbHid/debug/
+app/usbHid/release/
+app/usbHid/архив/
