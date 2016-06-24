@@ -19,7 +19,6 @@
 //#include "usb_desc.h"
 //#include "xprintf.h"
 //#include "timer.h"
-#include "arm_math.h"
 
 #define SYSCLK_FREQ  		8e6
 #define TimerTick			SYSCLK_FREQ/1000-1
@@ -30,7 +29,7 @@
 #define TIMEOUTKEY			1500
 #define BLINKTIME 			200
 #define RUNFIRETIME			1000
-#define MINBRIGHTLVL		(uint16_t) 10
+#define MINBRIGHTLVL		10
 #define BLINKACTGAMER		100
 
 typedef enum {
@@ -65,6 +64,11 @@ gamerJkl gamer[NUMOFPLAYERS] = {{notActivity, (uint16_t*) &TIM1->CCR1, button1, 
 
 __IO uint16_t brightLevel;
 __IO uint8_t pushFlag = 0;
+
+/***************************************debug****************************************/
+__IO int32_t SysTime_ms;
+
+/************************************************************************************/
 
 void enableEXTI3_6() {
 	NVIC_EnableIRQ(EXTI3_IRQn);
